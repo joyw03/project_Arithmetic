@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">100까지의 수</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			
+				<h3>60,70,80,90 알아보기</h3>
+				60이라 쓰고 ‘예순’ 또는 ‘육십’이라고 읽습니다.<br>
+				70이라 쓰고 ‘일흔’ 또는 ‘칠십’이라고 읽습니다.<br>
+				80이라 쓰고 ‘여든’ 또는 ‘팔십’이라고 읽습니다.<br>
+				90이라 쓰고 ‘아흔’ 또는 ‘구십’이라고 읽습니다.<br><br>
+				<h3>수의 순서 알아보기</h3>
+				숫자를 1,2,3,4,5... 로 1만큼 더 큰 수를 차례대로 놓아 만듭니다.<br>
+				이때, 오른쪽에 갈수록 수가 커집니다. 그러나 왼쪽으로 갈수록 수가 작아집니다.<br><br>
+
+				<h3>수의 크기 비교하기</h3>
+				31의 십의 자리 3, 일의 자리는 1입니다.<br>
+				40의 십의 자리는 4, 일의 자리는 0입니다.<br>
+				40의 십의 자리 수가 31의 십의 자리 수보다 크므로 40이 더 큽니다.<br>
+				한편, 수의 크기를 비교할 때에는 >,<와 같은 부등호를 사용할 수 있습니다.<br><br>
+				<h3>홀수, 짝수 알아보기</h3>
+				홀수란, 둘씩 짝이 지어지지 않은 수를 말합니다.d>
+				3을 둘씩 짝지어보면 한 묶음이 만들어지고, 낱개 한 개가 남습니다.<br>
+				따라서 3은 홀수입니다.<br>
+				이처럼 5,13,21,25,29,31등과 같은 홀수가 있습니다.<br>
+				또, 1은 둘씩 짝지어지지 않으므로 홀수입니다.<br><br>
+				짝수는 둘씩 짝지어지는 수를 말합니다.<br>
+				4를 둘씩 짝지어지면, 4는 둘씩 짝지을 수 있으므로, 4는 짝수입니다.<br>
+				이처럼 2,4,6,8,10,12,14등과 같은 짝수들이 있습니다.<br>
+
+					<h3>100까지의 수 나타내기, 쓰기, 읽기</h3>
+			<table border="1">
+				<thead>
+				<tr><th>50</th><th>쉰</th><th>오십</th></tr>
+			</thead>
+			<tfoot>
+				<tr><th>99</th><th>아흔아홉</th><th>구십구</th></tr>
+			</tfoot>
+			<tbody>
+				<tr><th>51</th><th>쉰하나</th><th>오십일</th></tr>
+				<tr><th>52</th><th>쉰둘</th><th>오십이</th></tr>
+				<tr><th>53</th><th>쉰셋</th><th>오십삼</th></tr>
+				<tr><th>54</th><th>쉰넷</th><th>오십사</th></tr>
+				<tr><th>55</th><th>쉰다섯</th><th>오십오</th></tr>
+				<tr><th>56</th><th>쉰여섯</th><th>오십육</th></tr>
+				<tr><th>57</th><th>쉰쉰일곱</th><th>오십칠</th></tr>
+				<tr><th>58</th><th>쉰여덟</th><th>오십팔</th></tr>
+				<tr><th>59</th><th>쉰아홉</th><th>오십구</th></tr>
+				<tr><th>60</th><th>예순</th><th>육십</th></tr>
+				<tr><th>61</th><th>예순하나</th><th>육십일</th></tr>
+				<tr><th>62</th><th>예순둘</th><th>육십이</th></tr>
+				<tr><th>63</th><th>예순셋</th><th>육십삼</th></tr>
+				<tr><th>64</th><th>예순넷</th><th>육십사</th></tr>
+				<tr><th>65</th><th>예순다섯</th><th>육십오</th></tr>
+				<tr><th>66</th><th>예순여섯</th><th>육십육</th></tr>
+				<tr><th>67</th><th>예순일곱</th><th>육십칠</th></tr>
+				<tr><th>68</th><th>예순여덟</th><th>육십팔</th></tr>
+				<tr><th>69</th><th>예순아홉</th><th>육십구</th></tr>
+				<tr><th>70</th><th>일흔</th><th>칠십</th></tr>
+				<tr><th>71</th><th>일흔하나</th><th>칠십일</th></tr>
+				<tr><th>72</th><th>일흔둘</th><th>칠십이</th></tr>
+				<tr><th>73</th><th>일흔셋</th><th>칠십삼</th></tr>
+				<tr><th>74</th><th>일흔넷</th><th>칠십사</th></tr>
+				<tr><th>75</th><th>일흔다섯</th><th>칠십오</th></tr>
+				<tr><th>76</th><th>일흔여섯</th><th>칠십육</th></tr>
+				<tr><th>77</th><th>일흔일곱</th><th>칠십칠</th></tr>
+				<tr><th>78</th><th>일흔여덟</th><th>칠십팔</th></tr>
+				<tr><th>79</th><th>일흔아홉</th><th>칠십구</th></tr>
+				<tr><th>80</th><th>여든</th><th>팔십</th></tr>
+				<tr><th>81</th><th>여든하나</th><th>팔십일</th></tr>
+				<tr><th>82</th><th>여든둘</th><th>팔십이</th></tr>
+				<tr><th>83</th><th>여든셋</th><th>팔십삼</th></tr>
+				<tr><th>84</th><th>여든넷</th><th>팔십사</th></tr>
+				<tr><th>85</th><th>여든다섯</th><th>팔십오</th></tr>
+				<tr><th>86</th><th>여든여섯</th><th>팔십육</th></tr>
+				<tr><th>87</th><th>여든일곱</th><th>팔십칠</th></tr>
+				<tr><th>88</th><th>여든여덟</th><th>팔십팔</th></tr>
+				<tr><th>89</th><th>여든아홉</th><th>팔십구</th></tr>
+				<tr><th>90</th><th>아흔</th><th>구십</th></tr>
+				<tr><th>91</th><th>아흔하나</th><th>구십일</th></tr>
+				<tr><th>92</th><th>아흔둘</th><th>구십이</th></tr>
+				<tr><th>93</th><th>아흔셋</th><th>구십삼</th></tr>
+				<tr><th>94</th><th>아흔넷</th><th>구십사</th></tr>
+				<tr><th>95</th><th>아흔다섯</th><th>구십오</th></tr>
+				<tr><th>96</th><th>아흔여섯</th><th>구십육</th></tr>
+				<tr><th>97</th><th>아흔일곱</th><th>구십칠</th></tr>
+				<tr><th>98</th><th>아흔여덟</th><th>구십팔</th></tr>
+			</tbody>
+			</table>
+			<br><br><br>
+
+
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>9까지의 수</li>
+				<li>50까지의 수</li>
+				<li>덧셈과 뺄셈</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

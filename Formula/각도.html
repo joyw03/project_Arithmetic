@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">각도</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>각의 크기</h3><br>
+			- 각의 크기를 각도라고 한다.<br>
+			- 각도를 나타내는 단위는 1도가 있음.<br>
+			- 직각을 똑같이 90으로 나눈 하나를 1도라 하고, 1°라고 씀.<br>
+
+			<h3>각을 크기에 따라 분류하기</h3>
+			예각 : 크기가 0°보다 크고, 직각보다 작은 각.<br>
+			둔각 : 크기가 직각보다 크고, 180°보다 작은 각.<br>
+
+			<h3>각도가 주어진 각 그리기</h3>
+			각도기를 사용하여 크기가 60°인 각 ㄱㄴㄷ그리기<br>
+			<ol>
+				<li>각의 한 변인 ㄴㄷ을 그리기.</li>
+				<li>각도기의 중심을 꼭짓점 ㄴ에 맞추고 각도기의 밑금을 변 ㄴㄷ과 맞추기.</li>
+				<li>각도기에서 60°가 되는 곳에 점 ㄱ 찍기.</li>
+				<li>각도기를 떼고 변 ㄱㄴ 긋기.</li>
+			</ol>
+
+			<h3>각도의 합과 차 구하기</h3>
+			20°와 30°를 더하려고 할때, 두각을 겹치지 않게 이어 놓고 전체 각의 크기를 재어보면 50°가 됩니다.<br>
+			20° + 30° = 50°<br>
+
+			50°에서 30°을 빼려고 할때, 두 각을 겹치지 않게 놓고 겹치지 않은 부분의 각의 크기를 재어보면 20°가 됩니다.<br>
+			50° - 30° = 20°<br>
+
+			<h3>삼각형, 사각형의 내각의 크기의 합 이해하기</h3>
+			<strong>삼각형의 합</strong><br>
+			모양과 크기에 관계없이 삼각형의 세 각의 크기의 합은 모두 180°로 같음<br>
+
+			<strong>사각형의 합</strong><br>
+
+			모양과 크기에 관계없이 사각형의 네 각의 크기의 합은 모두 360°로 같음<br>
+
+			<h3>삼각형을 각의 크기에 따라 분류하기</h3>
+			예각 삼각형 : 세 각이 모두 예각인 삼각형.<br>
+			둔각 삼각형 : 한 각이 둔각인 삼각형.<br>
+
+			<h3>삼각형을 변의 길이에 따라 분류하기</h3>
+			<strong>이등변삼각형</strong> : 두 변의 길이가 같은 삼각형.<br>
+			<strong>성질</strong> : 두 각의 크기가 같음.<br>
+			<strong>정삼각형</strong> : 세 변의 길이가 같은 삼각형.<br>
+			<strong>성질</strong> : 세 각의 크기가 모두 같음.<br>
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>평면도</li>
+				<li>삼각형</li>
+				<li>사각형</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

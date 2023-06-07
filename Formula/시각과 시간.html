@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">시각과 시간</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>몇 시 몇 분 알아보기</h3><br>
+			<img src="elementry1-10.png" width=50%; height=50%;><p> 
+			<!--https://pixabay.com/ko/vectors/%EC%8B%9C%EA%B3%84-%EB%B2%BD%EA%B1%B8%EC%9D%B4%EC%8B%9C%EA%B3%84-%EC%95%8C%EB%9E%8C-%EC%A0%95%EC%8B%9C-1141545/ 이미지 출처--><br>
+			(1) 5분 단위의 시각<br>
+			- 시계의 긴바늘이 가리키는 수가 1이면 5분, 2이면 10분, 3이면 15분, 4이면 20분, ......을 나타냅니다.<br>
+			위 시계가 가르키는 시간은 2시 30분 입니다.<br>
+			(2) 1분 단위의 시각<br>
+			- 시계에서 긴바늘이 가리키는 작은 눈금 한 칸 1분을 나타냅니다.<br>
+
+			<h3>여러 가지 방법으로 시각 읽기</h3>
+			시계가 나타내는 시각을 알아봅시다.<br><br>
+			<img src="elementry1-10.png" width=40%; height=40%;><p><br>
+			위 시계가 가르키는 시간은 2시 30분 입니다.<br>
+			2시 30분을 3시 30분 전이라고도 합니다.<br>
+
+			<h3>1시간 알아보기</h3>
+			시계의 긴 바늘이 한 바퀴 도는데 60분의 시간이 걸립니다.<br>
+			1시간은 60분입니다.<br>
+			1시간 = 60분<br>
+
+			<h3>하루의 시간 알아보기</h3>
+			하루는 24시간입니다.<br>
+			1일 = 24시간<br>
+			전날 밤 12시부터 낮 12시까지를 오전이라고 하고, 낮 12시부터 밤 12시까지를 오후라고 합니다.<br>
+
+			<h3>달력 알아보기</h3>
+			같은 요일이 돌아오는데 걸리는 기간을 1주일이라고 합니다.<br>
+			1주일은 7일 입니다.<br>
+			1주일 = 7일<br>
+			1주일은 일요일, 월요일, 화요일, 수요일, 목요일, 금요일, 토요일의 순서로 되어 있고, 같은 요일은 7일마다 반복됩니다.<br>
+			1년은 12개월 입니다.<br>
+			1년 = 12개월<br>
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>시계 보기와 규칙찾기</li>
+				<li>규칙 찾기</li>
+				<li>길이와 시간</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

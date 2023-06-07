@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		details summary::-webkit-details-marker {
+			color: #E2A8ED;
+			font-size: 20px;
+		}
+
+		ul {
+			margin-left: 30px;
+		}
+
+		summary {
+			margin-left: 40px;
+		}
+
+		ol{
+			margin-left: 40px;
+		}
+
+		h2{
+			margin-left: 30px;
+		}
+
+		div {
+			font-family:sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<div>
+		<h2>중학교 교육과정</h2>
+<details>
+		<summary>1학년</summary>
+		<ol>
+			<h3>1학기</h3>
+		<br><li>소인수분해</li>
+		<li>정수와 유리수</li>
+		<li>문자의 사용과 식의 계산</li>
+		<li>일차방정식</li>
+		<li>좌표와 그래프</li>
+		<li>정비례와 반비례</li>
+	</ol>
+	<ol>
+			<h3>2학기</h3>
+		<br><li>기본 도형</li>
+		<li>작도와 합동</li>
+		<li>다각형</li>
+		<li>원과 부채꼴</li>
+		<li>다면체와 회전체</li>
+		<li>입체도형의 겉넓이와 부피</li>
+		<li>자료의 정리와 해석</li>
+</ol>
+</details>
+<details>
+		<summary>2학년</summary>
+		<ol>
+			<h3>1학기</h3>
+		<br><li>유리수와 순환소수</li>
+		<li>식의 계산</li>
+		<li>부등식</li>
+		<li>방정식</li>
+		<li>일차함수</li>
+	</ol>
+	<ol>
+			<h3>2학기</h3>
+		<br><li>삼각형의 성질</li>
+		<li>사각형의 성질</li>
+		<li>도형의 닮음</li>
+		<li>피타고라스 정리</li>
+		<li>확률</li>
+</ol>
+</details>
+<details>
+		<summary>3학년</summary>
+		<ol>
+			<h3>1학기</h3>
+		<br><li>실수와 그 연산</li>
+		<li>다항식의 곱셈과 인수분해</li>
+		<li>이차방정식</li>
+		<li>이차함수</li>
+	</ol>
+	<ol>
+			<h3>2학기</h3>
+		<br><li>삼각비</li>
+		<li>원의 성질</li>
+		<li>통계</li>
+</ol>
+</details>
+</div>
+
+		<script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+		</script>
+</body>

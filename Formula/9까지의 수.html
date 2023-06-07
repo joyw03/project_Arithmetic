@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+			font-size: 20px;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">9까지의 수</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			1은 ‘하나’ 또는 ‘일’이라고 읽습니다.<br>
+			2는 ‘둘’ 또는 ‘이’라고 읽습니다.<br>
+			3은 ‘셋’ 또는 ‘삼’이라고 읽습니다.<br>
+			4는 ‘넷’ 또는 ‘사’라고 읽습니다.<br>
+			5는 ‘다섯’또는 ‘오’라고 읽습니다.<br>
+			6은 ‘여섯’ 또는 ‘육’이라고 읽습니다.<br>
+			7는 ‘일곱’ 또는 ‘칠’이라고 읽습니다.<br>
+			8은 ‘여덟’ 또는 ‘팔’이라고 읽습니다.<br>
+			9는 ‘아홉’ 또는 ‘구’라고 읽습니다.
+			<br>
+			<br>
+			9까지의 수의 순서는 다음과 같습니다.<br>
+			1,2,3,4,5,6,7,8,9
+			<br>
+			<br>
+			1-2-3-4-5-6-7-8-9<br>
+			수의 순서에서 왼쪽으로 한 칸만큼 이동하면 1만큼 더 작은 수이고.<br>
+			수의 순서에서 오른쪽으로 한 칸만큼 이동하면 1만큼 더 큰 수입니다.<br>
+			아무것도 없는 것을 나타낼 때 0이라고 쓰고 영이라고 읽습니다.
+			<br>
+			<br>
+			9까지의 수의 순서는 다음과 같습니다.<br>
+			1,2,3,4,5,6,7,8,9<br>
+			여기서 오른쪽에 갈수록 수가 커집니다, 그러나 왼쪽으로 갈수록 수가 작아집니다.<br><br><br><br>
+
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>50까지의 수</li>
+				<li>100까지의 수</li>
+				<li>비교하기</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">50까지의 수</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			
+				<h3>10(십)의 뜻, 읽기 모으기와 가르기</h3>
+				9보다 1만큼 큰 수는 10이라고 쓰고, 십, 열이라고 읽습니다.<br>
+				4와 6을 모으면 10이 됩니다.<br>
+				10을 6과 4로 가를 수 있습니다.<br>
+
+				<h3>십몇을 알아볼까</h3>
+				10보다 1만큼 큰 수는 11이라고 쓰고 십일, 열하나라고 읽습니다.<br>
+				10보다 5만큼 큰 수는 15이라고 쓰고 십오, 열다섯이라고 읽습니다.<br>
+					<h3>50까지의 수 나타내기, 쓰기, 읽기</h3>
+			<table border="1">
+				<thead>
+				<tr><th>1</th><th>하나</th><th>일</th></tr>
+			</thead>
+			<tfoot>
+				<tr><th>50</th><th>쉰</th><th>오십</th></tr>
+			</tfoot>
+			<tbody>
+				<tr><th>2</th><th>둘</th><th>이</th></tr>
+				<tr><th>3</th><th>셋</th><th>삼</th></tr>
+				<tr><th>4</th><th>넷</th><th>사</th></tr>
+				<tr><th>5</th><th>다섯</th><th>오</th></tr>
+				<tr><th>6</th><th>여섯</th><th>육</th></tr>
+				<tr><th>7</th><th>일곱</th><th>칠</th></tr>
+				<tr><th>8</th><th>여덟</th><th>팔</th></tr>
+				<tr><th>9</th><th>아홉</th><th>구</th></tr>
+				<tr><th>10</th><th>열</th><th>십</th></tr>
+				<tr><th>11</th><th>열하나</th><th>십일</th></tr>
+				<tr><th>12</th><th>열둘</th><th>십이</th></tr>
+				<tr><th>13</th><th>열셋</th><th>십삼</th></tr>
+				<tr><th>14</th><th>열넷</th><th>십사</th></tr>
+				<tr><th>15</th><th>열다섯</th><th>십오</th></tr>
+				<tr><th>16</th><th>열여섯</th><th>십육</th></tr>
+				<tr><th>17</th><th>열일곱</th><th>십칠</th></tr>
+				<tr><th>18</th><th>열여덟</th><th>십팔</th></tr>
+				<tr><th>19</th><th>열아홉</th><th>십구</th></tr>
+				<tr><th>20</th><th>스물</th><th>이십</th></tr>
+				<tr><th>21</th><th>스물하나</th><th>이십일</th></tr>
+				<tr><th>22</th><th>스물둘</th><th>이십이</th></tr>
+				<tr><th>23</th><th>스물셋</th><th>이십삼</th></tr>
+				<tr><th>24</th><th>스물넷</th><th>이십사</th></tr>
+				<tr><th>25</th><th>스물다섯</th><th>이십오</th></tr>
+				<tr><th>26</th><th>스물여섯</th><th>이십육</th></tr>
+				<tr><th>27</th><th>스물일곱</th><th>이십칠</th></tr>
+				<tr><th>28</th><th>스물여덟</th><th>이십팔</th></tr>
+				<tr><th>29</th><th>스물아홉</th><th>이십구</th></tr>
+				<tr><th>30</th><th>서른</th><th>삼십</th></tr>
+				<tr><th>31</th><th>서른하나</th><th>삼십일</th></tr>
+				<tr><th>32</th><th>서른둘</th><th>삼십이</th></tr>
+				<tr><th>33</th><th>서른셋</th><th>삼십삼</th></tr>
+				<tr><th>34</th><th>서른넷</th><th>삼십사</th></tr>
+				<tr><th>35</th><th>서른다섯</th><th>삼십오</th></tr>
+				<tr><th>36</th><th>서른여섯</th><th>삼십육</th></tr>
+				<tr><th>37</th><th>서른일곱</th><th>삼십칠</th></tr>
+				<tr><th>38</th><th>서른여덟</th><th>삼십팔</th></tr>
+				<tr><th>39</th><th>서른아홉</th><th>삼십구</th></tr>
+				<tr><th>40</th><th>마흔</th><th>사십</th></tr>
+				<tr><th>41</th><th>마흔하나</th><th>사십일</th></tr>
+				<tr><th>42</th><th>마흔둘</th><th>사십이</th></tr>
+				<tr><th>43</th><th>마흔셋</th><th>사십삼</th></tr>
+				<tr><th>44</th><th>마흔넷</th><th>사십사</th></tr>
+				<tr><th>45</th><th>마흔다섯</th><th>사십오</th></tr>
+				<tr><th>46</th><th>마흔여섯</th><th>사십육</th></tr>
+				<tr><th>47</th><th>마흔일곱</th><th>사십칠</th></tr>
+				<tr><th>48</th><th>마흔여덟</th><th>사십팔</th></tr>
+				<tr><th>49</th><th>마흔아홉</th><th>사십구</th></tr></tbody>
+			</table>
+			<br><br><br>
+
+
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>9까지의 수</li>
+				<li>100까지의 수</li>
+				<li>덧셈과 뺄셈</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

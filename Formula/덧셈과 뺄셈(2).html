@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">덧셈과 뺄셈</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>받아올림이 있는 두 자리 수와 한 자리 수의 덧셈</h3>
+
+			예시) 사과 12개와 배 5개가 있습니다. 여기에 있는 과일들을 모두 세어봅시다.<br>
+			이때 사과가 모두 12개 이므로 배부터 이어셀 수 있습니다.<br>
+			배부터 이어 세면 열둘, 열셋, 열넷, 열다섯, 열여섯, 열일곱<br>
+			열일곱입니다. 따라서 과일은 모두 17개 입니다.<br>
+			이처럼 받아올림이 있는 두 자리 수와 한 자리 수의 덧셈을 이어세기 방법으로 풀 수 있습니다.<br>
+
+			<h3>여러 가지 방법으로 덧셈하기</h3>
+			예시) 14+38을 여러 가지 방법으로 계산하기<br>
+			<방법 1> 14을 20으로 만들어 계산해 봅니다.<br>
+			14+38=20+38-6<br>
+			＝58-6<br>
+			＝52<br>
+			<방법 2> 14에 30을 더하고 8을 더 더해 봅니다.<br>
+			14+38=14+30+8<br>
+			=44+8<br>
+			=52<br>
+
+			<h3>받아내림이 있는 뺄셈</h3>
+			예시) 32-3을 계산해볼까요?<br>
+			32는 10개씩 포장된 젤리 3개와 낱개로 2개로 표현할 수 있습니다.<br>
+			그런데 여기서는 낱개 3개를 먹을 수 없습니다.<br>
+			이때 우리는 10개씩 포장된 젤리 3개중 하나를 뜯어서 낱개 10개로 바꿀 수 있습니다.<br>
+			그러면 10개씩 포장 된 젤리 2개와 낱게 12개로 바꾼 후 낱개 3개를 먹으면 어떻게 될까요?<br>
+			10개씩 포장 된 젤리 2개와 낱개 12-3=9, 9개가 됩니다.<br>
+			따라서 32 - 3 = 29로 계산할 수 있습니다.<br>
+
+			<h3>여러 가지 방법으로 뺄셈하기</h3>
+			예시) 34-18을 여러 가지 방법으로 계산하기<br>
+			<방법 1> 34에서 20을 빼고 2를 더해봅니다.<br>
+			34-18=34-20+2<br>
+			=14+2<br>
+			=16<br>
+			<방법 2> 34에서 10을 빼고 다시 8을 뺍니다.<br>
+			34-18=34-10-8<br>
+			=24-8<br>
+			=18<br>
+
+			<h3>덧셈과 뺄셈과의 관계를 식으로 나타내기</h3>
+			예시) 곰인형 13개와 강아지인형 12개가 있습니다.<br>
+			덧셈식 13 + 12 = 25를 보고, 뺄셈식으로 나타내기<br>
+			13 + 12 = 25<br>
+			25 - 12 = 13<br>
+			25 - 13 = 12<br>
+			강아지 인형이 몇개이니 뺄셈식으로 나타내면 25 - 13 = 12입니다.<br>
+			뺄셈식 25 - 13 = 12을 보고, 덧셈식으로 나타내기<br>
+			25 - 13 = 12<br>
+			13 + 12 = 25<br>
+			12 + 13 = 25<br>
+
+			<h3>□의 값 구하기</h3>
+			(1)모르는 수를 □를 사용하여서 덧셈식으로 나타내고 □의 값 구하기<br>
+			 - 사탕 18개가 있습니다. 마트에서 몇개를 더 샀더니만 사탕은 모두 32개가 되었습니다.<br>
+			 식 : 18 + □ = 32<br>
+			 18 + □ = 32 에서 32 - 18 = □이므로 □는 14입니다. 따라서 마트에서 더 산 사탕은 14개입니다.<br>
+			 (2)모르는 수를 □를 사용하여서 뺄셈식으로 나타내고 □의 값 구하기<br>
+			  - 초콜릿 14개가 있습니다. 가족들에게 몇개를 나눠주었더니 남은 초콜릿은 6개입니다.<br>
+			  식 : 14 - □ = 6<br>
+			  14 - □ =  6에서 14 - 6 = □이므로 □는 8입니다. 따라서 가족들에게 준 초콜릿은 8개입니다.<br>
+
+			  <h3>세 수의 계산하기</h3>
+			  <ol>
+			  	<li>54-23+4의 계산</li>
+			  	54 - 23 + 4 = (54 - 23) + 4<br>
+			  	= 31 + 4<br>
+			  	=35 <br>
+			  	<li>22+42-13의 계산</li>
+			  	22 + 42 - 13 = (22 + 42) -13<br>
+			  	=64 - 13<br>
+			  	=51<br>
+			  </ol>
+			  <h4>덧셈과 뺄셈이 섞여 있는 세 수의 계산은 앞에서부터 순서대로 계산을 해야합니다.</h4>
+
+			<br><br><br>
+
+
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>덧셈과 뺄셈</li>
+				<li>덧셈과 뺄셈(1)</li>
+				<li>곱셈 구구</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

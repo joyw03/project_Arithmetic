@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">네 자리 수</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>100이 10인 수와 몇천 알아보기</h3>
+			100이 10이면 1000입니다. 1000은 천이라고 읽습니다.<br>
+			1000이 2이면 2000입니다. 2000은 이천이라고 읽습니다.<br>
+			1000이 8이면 8000입니다. 8000은 천이라고 읽습니다.<br>
+
+			<h3>네 자리 수 알아보기</h3>
+			<h2>1000이 6100이 3, 10이 4, 1이 2</h2>
+			쓰기 : 6342<br>
+			읽기 : 육천삼백사십이<br>
+
+			<h3>각 자리의 숫자가 나타내는 값 알아보기</h3>
+			6은 천의 자리 숫자, 6000을 나타냅니다.<br>
+			3은 백의 자리 숫자, 300을 나타냅니다.<br>
+			4은 십의 자리 숫자, 40을 나타냅니다.<br>
+			2는 일의 자리 숫자, 2를 나타냅니다.<br>
+			-> 6342 = 6000 + 300 + 40 + 2<br>
+
+			<h3>뛰어 세기</h3>
+			1000씩 뛰어 세기<br>
+			-> 1000 - 2000 - 3000 - 4000 - 5000 - 6000 - 7000<br>
+			100씩 뛰어 세기<br>
+			-> 2300 - 2400 - 2500 - 2600 - 2700 - 2800 - 2900 <br>
+			10씩 뛰어 세기<br>
+			-> 3510 - 3520 - 3530 - 3540 - 3550 - 3560 - 3570 <br>
+			1씩 뛰어 세기<br>
+			-> 5893 - 5894 - 5895 - 5896 - 5897 - 5898 - 5899
+
+			<h3>수의 크기 비교하기</h3>
+
+			<ol>
+				<li>천의 자리 수가 클수록 큰 수 입니다.</li>
+				<li>천의 자리 수가 같으면, 백의 자리 수가 클수록 큰 수입니다.</li>
+				<li>천의 자리 수, 백의 자리 수가 각각 같으면 십의 자리 수가 클수록 큰 수입니다.</li>
+				<li>천의 자리 수, 백의 자리 수, 십의 자리 수가 각각 같으면 일의 자리 수가 클수록 큰 수입니다.</li>
+			<br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>50까지의 수</li>
+				<li>100까지의 수</li>
+				<li>세 자리 수</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

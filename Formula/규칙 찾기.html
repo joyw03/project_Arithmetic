@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">규칙 찾기</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>덧셈표에서 규칙 찾기</h3>
+			<table  border="3">
+				<thead style="background:#E2A8AD;"><tr><th>+</th><th>1</th><th>3</th><th>5</th><th>7</th><th>9</th></tr></thead>
+				<tfoot><tr><th style="background:#E2A8AD;">10</th><th>11</th><th>13</th><th>15</th><th>17</th><th>19</th></tr></tfoot>
+				<tbody><tr><th style="background:#E2A8AD;">2</th><th>3</th><th>5</th><th>7</th><th>9</th><th>11</th></tr>
+				<tr><th style="background:#E2A8AD;">4</th><th>5</th><th>7</th><th>9</th><th>11</th><th>13</th></tr>
+				<tr><th style="background:#E2A8AD;">6</th><th>7</th><th>9</th><th>11</th><th>13</th><th>15</th></tr>
+				<tr><th style="background:#E2A8AD;">8</th><th>9</th><th>11</th><th>13</th><th>15</th><th>17</th></tr>
+				</tbody>
+			</table>
+			<ul>
+				<li>아래쪽으로 내려갈수록 2씩 커지는 규칙이 있습니다.</li>
+				<li>오른쪽으로 갈수록 2씩 커지는 규칙이 있습니다.</li>
+				<li>+를 기점으로 대각선으로 내려가면 4씩 커지는 규칙이 있습니다.</li>
+			</ul>
+			<h3>곱셈표에서 규칙 찾기</h3>
+			<table  border="3">
+				<thead style="background:#E2A8AD;"><tr><th>X</th><th>1</th><th>3</th><th>5</th><th>7</th><th>9</th></tr></thead>
+				<tfoot><tr><th style="background:#E2A8AD;">9</th><th>9</th><th>27</th><th>45</th><th style="background:lightcoral;">63</th><th>81</th></tr></tfoot>
+				<tbody><tr><th style="background:#E2A8AD;">1</th><th>1</th><th>3</th><th>5</th><th style="background:lightcoral;">7</th><th>9</th></tr>
+				<tr><th style="background:#E2A8AD;">3</th><th style="background:lightskyblue;">3</th><th style="background:lightskyblue;">9</th><th style="background:lightskyblue;">15</th><th style="background:lightskyblue;">21</th><th style="background:lightskyblue;">27</th></tr>
+				<tr><th style="background:#E2A8AD;">5</th><th>5</th><th>15</th><th>25</th><th style="background:lightcoral;">35</th><th>45</th></tr>
+				<tr><th style="background:#E2A8AD;">7</th><th>7</th><th>21</th><th>35</th><th style="background:lightcoral;">49</th><th>63</th></tr>
+				</tbody>
+			</table>
+			<ul>
+				<li>빨간색으로 칠해진 수는 아래로 내려갈 수록 14씩 커지는 규칙이 있습니다</li>
+				<li>파란색으로 칠해진 수는 오른쪽으로 갈수록 6씩 커지는 규칙이 있습니다.</li>
+				<li>X를 기점으로 따라 접었을 때, 만나는 수들은 서로 같습니다.</li>
+			</ul>
+			<h3>무늬에서 규칙 찾기</h3>
+			<img src="elementry1-11.png" width=50%; height=50%;><p>
+			동그라미와 세모 모양이 반복되는 규칙입니다.<br>
+			<h3>생활에서 규칙 찾기</h3>
+			우리는 생활 속 계산기, 달력, 시계등에서 규칙을 찾을 수 있습니다.<br>
+			계산기 자판의 숫자는 오른쪽으로 갈수록 1씩 커지고 위아래는 3씩 차이가 납니다.<br>
+			달력에서 모든 요일은 7번마다 반복이 됩니다.<br>
+			날짜는 오른쪽으로 갈수록 1씩, 아래로 갈수록 7씩 커집니다.<br>			
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>시계 보기와 규칙찾기</li>
+				<li>곱셈구구</li>
+				<li>자료의 정리</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

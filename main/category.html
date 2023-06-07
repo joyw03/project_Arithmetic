@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		div.centered {
+			display: flex; 
+			justify-content: center; 
+			height: 30vh;
+			align-items: center; 
+		}
+
+		.icon {
+			transition: transform 0.6s;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #ffffff;
+			border: none;
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+
+		.icon:hover {
+			transform: scale(1.1);
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-size: 45px; text-align: center; margin-top: 80px; font-family:sans-serif;">교육과정 찾아보기</h1>
+
+	<div class="centered">
+		<button type="button" class="icon">
+			<img src="1.png" id="icon1" onclick="location.href='category1.html'" alt="이미지 로드 에러...">
+		</button>
+
+		<button type="button" class="icon">
+			<img src="2.png" id="icon2" onclick="location.href='category2.html'" alt="이미지 로드 에러...">
+		</button>
+
+		<button type="button" class="icon">
+			<img src="3.png" id="icon3" onclick="location.href='category3.html'" alt="이미지 로드 에러...">
+		</button>
+
+		<button type="button" class="icon">
+			<img src="4.png" id="icon4" onclick="location.href='category4.html'" alt="이미지 로드 에러...">
+		</button>
+	</div>
+
+	<script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

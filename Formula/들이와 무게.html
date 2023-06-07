@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">들이와 무게</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>들이와 단위 알아보기</h3>
+			<strong>블록 1000개 만큼을 그릇에 담은 양</strong><br>
+			- 읽기 : 1리터<br>
+			- 쓰기 : 1L<br>
+			<strong>블록 1개 만큼을 그릇에 담은 양</strong><br>
+			- 읽기 : 1밀리리터<br>
+			- 쓰기 : 1mL<br>
+			<br>
+			1리터는 1000밀리리터와 같습니다.<br>
+
+			<h3>단위가 있는 들이 비교하기</h3>
+			<strong>L단위부터 비교</strong><br>
+			2L < 3000mL < 4L<br>
+			<strong>L가 같으면 m단위를 비교</strong><br>
+			5L 220mL < 5L 440mL<br>
+
+			<h3>들이의 합과 차</h3>
+			
+			- 들이의 합과 차를 구할 떄에는 L는 L끼리, mL는 mL끼리 단위를 맞추어 계산합니다.<br>
+			-받아올림이 있는 들이의 합과 받아내림이 있는 들이의 차는 mL를 먼저 계산한 후, L를 계산합니다<br>
+
+			<h3>무게의 단위 알아보기</h3>
+			<strong>물 1L의 무게</strong><br>
+			- 읽기 : 1킬로그램<br>
+			- 쓰기 : 1kg<br>
+
+			<strong>물 1mL의 무게</strong><br>
+			- 읽기 : 1그램<br>
+			- 쓰기 : 1g<br>
+
+			<h3>단위가 있는 무게 비교하기</h3>
+			<strong>kg 단위부터 비교</strong><br>
+			4kg 300g < 6kg<br>
+			<strong>kg이 같으면 g단위를 비교</strong><br>
+			3kg 200g < 3kg 300g<br>
+
+			<h3>무게의 합과 차</h3>
+			- 무게의 합과 차를 구할 떄에는 kg는 kg끼리, g는 g끼리 단위를 맞추어 계산합니다.<br>
+			-받아올림이 있는 무게의 합과 받아내림이 있는 무게의 차는 g를 먼저 계산한 후, kg를 계산합니다<br>
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>길이와 시간</li>
+				<li>길이재기</li>
+				<li>길이 재기</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

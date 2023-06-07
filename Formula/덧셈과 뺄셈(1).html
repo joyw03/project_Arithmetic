@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">덧셈과 뺄셈</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>받아올림이 없는 (두 자리 수)+(한 자리 수), (한 자리 수)+(두 자리 수)</h3>
+			ex) 32+4를 계산해보면, 32을 10씩 묶음과 낱개로 나타내어보면,<br>
+			32은 10씩 묶음 3개, 낱개 2이고, 4는 낱개 4를 뜻합니다.<br>
+			32와 4를 더하면 10씩 묶음 3개, 낱개 6개가 됩니다.<br>
+			따라서 36입니다.<br>
+			
+			<h3>받아올림이 없는 (두 자리 수)+(두 자리 수)</h3>
+			ex) 54+14를 계산해보면, 54는 묶음 5개, 낱개 4개, 14는 묶음 1개, 낱개 4개입니다.<br>
+			54+14는 10씩 묶음 6개, 낱개 8개입니다.<br>
+			따라서 68입니다.<br>
+
+
+			<h3>받아내림이 없는 (두 자리 수)-(한 자리 수)</h3>
+			1) 빼어지는 수의 묶음과 날개를 생각합니다.<br>
+			예) 55는 10씩 묶음 5개, 낱개 5개<br>
+			2) 빼어지는 수의 낱개만큼 뺍니다.<br>
+			예) 4는 날개 4개<br>
+			3) 남은 수의 묶음과 낱개를 생각합니다.<br>
+			예) 55-4는 10씩 묶음 5개, 낱개 1개로 51<br>
+			[참고] 일의 자리끼리 빼면 쉽게 두 수의 차를 구할 수 있습니다.<br>
+
+			<h3>받아내림이 없는 (두 자리 수)-(두 자리 수)</h3>
+			ex)　35를 묵음과 낱개로 나타내어보면 묶음 3개, 낱개 5개입니다.<br>
+			21을 묵음과 낱개로 나타내어보면 묵음 2개, 낱개 1개입니다.<br>
+			35에서 21을 빼면 묶음 1개, 낱개 4개가 남습니다. 따라서 35 - 21 - 14입니다.<br>
+
+			<h3>한 자리 수인 세 수의 뺄셈</h3>
+			앞의 두 수의 뺄셈을 합니다.<br>
+			앞에서 구한 수에서 나머지 한 수를 뺍니다.<br>
+			ex)7-2-3=?<br>
+			7-2=5<br>
+			5-3=2<br>
+			따라서, 7-2-3=2입니다.<br>
+
+			<h3>합이 10보다 큰 두 수의 덧셈</h3>
+			ex)사과 7개와 배 5개가 있습니다. 여기에 있는 과일들을 모두 세어봅시다.<br>
+			이때 사과가 모두 7개 이므로 배부터 이어셀 수 있습니다.<br>
+			배부터 이어 세면 일곱, 여덟, 아홉, 열, 열하나, 열둘<br>
+			열둘입니다. 따라서 과일은 모두 12개 입니다.<br>
+
+			이처럼 합이 10보다 큰 두 수의 덧셈을 이어세기 방법으로 풀 수 있습니다.<br>
+
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>50까지의 수</li>
+				<li>100까지의 수</li>
+				<li>덧셈과 뺄셈</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

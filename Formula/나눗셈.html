@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">나눗셈</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>똑같이 나누기</h3>
+			15 ÷ 5 ＝ 3<br>
+			- 망고 15개를 5개씩 묶어서 3번 덜어 낼 수 있음.<br>
+			- 망고 15개에서 5번씩 3번 빼면  0이 됨.<br>
+			
+			<h3>곱셈과 나눗셈의 관계</h3>
+			- 곱셈식으로 2개의 나눗셈식을 만들 수 있음<br>
+			10 × 5 ＝ 50<br>
+			[방법 1]50 ÷ 10 ＝ 5 <br>
+			[방법 2]50 ÷ 5 ＝ 10 <br>
+			
+			- 나눗셈식으로 2개의 곱셈식을 만들 수 있음<br>
+			15 ÷ 5 ＝ 3
+			[방법 1] 3 × 5 ＝ 15 <br>
+			[방법 2] 5 × 3 ＝ 15 <br>
+
+			<h3>곱셈구구로 나눗셈의 몫 구하기</h3>
+			- 12 ÷ 2의 몫 구하기<br><br>
+			<table  border="1">
+				<thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead>
+				<tfoot><tr><th>2</th><th>2</th><th>4</th><th>6</th><th>8</th><th>10</th><th>12</th><th>14</th><th>16</th><th>18</th></tr></tfoot>
+			</table><br>
+			나누는 수인 2의 단 곱셈구구를 외워 곱이 나뉠 수인 12가 되는 곱셈식 찾기<br>
+			- 2 × 6 ＝ 12이므로 12 ÷ 2에서 몫은 6.<br>
+			    <style>
+        .c12 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-size: 24px;
+        }
+    </style>
+    <div class="c12">
+        <div>15</div>
+        <div>&#9472;&#9472;&#9472;&#9472;&#9472;</div>
+        <div>3</div>
+        <div>= 5</div>
+    </div>
+		<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>곱셈</li>
+				<li>곱셈구구</li>
+				<li>곱셈(1)</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">큰 수</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>만 알아보기</h3>
+			만 : 1000이 10개이면 10000임. 이것을 10000 또는 1만이라 쓰고 만 또는 일만이라고 읽음.<br>
+			
+			<h3>다섯 자리 수 알아보기</h3>
+			<table border="1">
+			<thead><tr><th></th><th>만의 자리</th><th>천의 자리</th><th>백의 자리</th><th>십의 자리</th><th>일의 자리</th></tr></thead>
+			<tfoot><tr><th>수</th><th>80000</th><th>5000</th><th>300</th><th>20</th><th>3</th></tr></tfoot>
+			<tbody><tr><th>숫자</th><th>8</th><th>5</th><th>3</th><th>2</th><th>3</th></tr></tbody>
+			</table>
+			10000이 8개, 1000이 5개, 100이 3개, 10이 2개, 1이 3개이면 85323이라 쓰고 팔만오천삼백이십삼이라고 읽습니다.<br>
+
+			<h3>십만, 백만, 천만 알아보기</h3>
+			<strong>- 십만 : </strong>  10000이 10개이면 100000 또는 10만이라 쓰고 십만이라고 읽음.<br>
+			<strong>- 백만 : </strong> 10000이 100개이면 1000000 또는 100만이라 쓰고 백만이라고 읽음.<br>
+			<strong>- 천만 : </strong> 10000이 1000개이면 10000000 또는 1000만이라 쓰고 천만이라고 읽음.<br>
+
+			<h3>억과 조 알아보기</h3>
+			<strong>- 억 : </strong> 1000만이 10개인 수. 100000000 또는 1억이라 쓰고 억 또는 일억이라고 읽음.<br>
+			<strong>- 조 : </strong> 1000억이 10개인 수. 1000000000000 또는 1조라 쓰고 조 또는 일조라고 읽음.<br>
+			조가 2423개, 억이 2451개, 만이 7485개인 수<br>
+			- 2423조 2451억 7485만<br>
+			<strong>- 쓰기 : </strong>2423245174850000<br>
+			<strong>- 읽기 : </strong>이천사백이십삼조 이천사백오십일억 칠천사백팔십오만<br>
+
+			<h3>뛰어서 세기</h3>
+			뛰어서 세기 규칙<br>
+			만씩 뛰어서 세기 : 만의 자리 숫자가 1씩 커짐.<br>
+			억씩 뛰어서 세기 : 억의 자리 숫자가 1씩 커짐.<br>
+			조씩 뛰어서 세기 : 조의 자리 숫자가 1씩 커짐.<br>
+
+			<h3>두 수의 크기 비교하기</h3>
+			자릿수가 다른 두 수의 크기 비교 : 자릿수가 많은 쪽이 더 큰 수임.<br>
+			자릿수가 같은 두 수의 크기 비교 : 높은 자리 숫자부터 차례대로 비교하여 높은 자리 숫자가 큰 쪽이 더 큰 수임.<br>
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>세 자리 수</li>
+				<li>네 자리 수</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>

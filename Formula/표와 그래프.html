@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+	<title>Arithmetic</title>
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
+		#search input[type="text"]{
+			width: 450px;
+			height: 30px;
+			border: 1px solid #E2A8ED;
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 50px;
+			margin-bottom: 13px;
+
+			background: 4% no-repeat;
+			padding-left: 25px;
+		}
+
+		#search button[type="submit"] {
+			position: absolute;
+			background-color: rgba( 255, 255, 255, 0);
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-size: 5px;
+			cursor: pointer;
+			vertical-align: middle;
+			margin-left: 480px;
+			margin-bottom: 13px;
+			z-index: 1;
+		}
+
+		article#core {
+			float: left; 
+			width: 60%;
+			margin-left: 30px;
+			margin-top: 20px;
+			font-family:sans-serif;
+		}
+
+		aside#aside { 
+			margin-top: 15px;
+			width:30%; 
+			float:right;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 style="font-family:Times; font-size: 40px; margin-left: 20px; margin-top: 10px;"><a href="C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/main/main.html" style="text-decoration: none; color: inherit;">Arith<span style="color : #E2A8ED;">m</span>atic</h1></a>
+		<form id="search" method="get" onsubmit="return result()">
+			<button type="submit" class="searchButton">
+				<img src="search.png" width="23" height="23" alt="이미지 로드 에러">
+			</button>
+			<input type="text" id="name" class="searchBox" placeholder="Search...">
+		</form>
+	</div>
+
+	<h1 style="font-family:sans-serif; margin-left: 30px; margin-top: 15px; display:inline;">표와 그래프</h1>
+	<hr style="background:#E2A8ED; height:3px; border:0;">
+
+
+	<section id="content">
+
+		<article id ="core">
+			<h3>자료를 보고 표로 나타내기</h3>
+			- 친구들이 좋아하는 색을 나타내봅시다.<br><br>
+			<table border="1">
+				<thead><tr><th>A 보라색</th><th>B 보라색</th><th> C 검정색</th><th>D 핑크색</th><th>E 검정색</th></tr></thead>
+				<tfoot><tr><th>F 보라색</th><th>G 핑크색</th><th>H 검정색</th><th>I 보라색</th><th>J 민트색</th></tr>
+				</tfoot>
+			</table><br>
+			- 색깔별로 친구 수를 세어 표로 나타냅니다.<br><br>
+			<table  border="1">
+				<thead><tr><th>색</th><th>보라색</th><th>민트색</th><th>검정색</th><th>핑크색</th></tr></thead>
+				<tfoot><tr><th>수 (명)</th><th>4</th><th>1</th><th>3</th><th>2</th></tr>
+				</tfoot>
+			</table><br>
+
+			<h3>그래프로 나타내기</h3>
+			- 그래프 그리는 순서
+			<ol>
+				<li>가로와 세로에 무엇을 나타낼지 정합니다.</li>
+				<li>가로와 세로를 몇 칸으로 할지 정합니다.</li>
+				<li>수만큼 O를 표시합니다. 이때 O대신 X,/로 표시해도 됩니다.</li>
+				<li>그래프의 제목을 씁니다.</li>
+				<h2 style="margin-left:20px;"> 좋아하는 색깔별 학생 수</h2>
+			<table  border="1">
+				<thead><tr><th>4</th><th>O</th><th></th><th></th><th></th></tr></thead>
+				<tfoot><tr><th>학생 수/색깔</th><th>보라색</th><th>민트색</th><th>검정색</th><th>핑크색</th></tr></tfoot>
+				<tbody><tr><th>3</th><th>O</th><th></th><th>O</th><th></th></tr>
+				<tr><th>2</th><th>O</th><th></th><th>O</th><th>O</th></tr>
+				<tr><th>1</th><th>O</th><th>O</th><th>O</th><th>O</th></tr></tbody>
+			</table>
+
+				<h3>표와 그래프로 나타내고 내용 알아보기</h3>
+				좋아하는 색을 표로 나타내봅시다.<br><br>
+				<table border="1">
+				<thead><tr><th>A 보라색</th><th>B 보라색</th><th> C 검정색</th><th>D 핑크색</th><th>E 검정색</th></tr></thead>
+				<tfoot><tr><th>F 보라색</th><th>G 핑크색</th><th>H 검정색</th><th>I 보라색</th><th>J 민트색</th></tr>
+				</tfoot>
+			</table><br>
+				(1) 표로 나타내기<br><br>
+				<table  border="1">
+				<thead><tr><th>색</th><th>보라색</th><th>민트색</th><th>검정색</th><th>핑크색</th></tr></thead>
+				<tfoot><tr><th>수 (명)</th><th>4</th><th>1</th><th>3</th><th>2</th></tr>
+				</tfoot>
+			</table><br>
+				(2) 그래프로 나타내기<br><br>
+			<table  border="1">
+				<thead><tr><th>4</th><th>O</th><th></th><th></th><th></th></tr></thead>
+				<tfoot><tr><th>학생 수/색깔</th><th>보라색</th><th>민트색</th><th>검정색</th><th>핑크색</th></tr></tfoot>
+				<tbody><tr><th>3</th><th>O</th><th></th><th>O</th><th></th></tr>
+				<tr><th>2</th><th>O</th><th></th><th>O</th><th>O</th></tr>
+				<tr><th>1</th><th>O</th><th>O</th><th>O</th><th>O</th></tr></tbody>
+			</table><br>
+			표<br>
+			- 조사한 자료의 종류별 개수를 쉽게 알 수 있습니다.<br>
+			- 조사한 자료의 전체 개수를 쉽게 알 수 있습니다.<br><br>
+			그래프<br>
+			- 가장 많은 것과 가장 적은 것을 한눈에 알 수 있습니다.<br>
+			- 각 종류별로 많고 적음을 비교하기 쉽습니다.<br>
+			<br><br><br>
+		</article>
+
+		<aside id="aside">
+			<h3 span style="color:#E2A8ED;">
+				연관검색어
+			</h3>
+			<ul>
+				<li>시계 보기와 규칙찾기</li>
+				<li>규칙 찾기</li>
+				<li>자료의 정리</li>
+			</ul>
+		</aside>
+
+	</section>
+
+    <script>
+			function result() {
+				var name = document.getElementById('name').value;
+				var link = 'C:/Users/tomyb/OneDrive/바탕 화면/학교/한국성서대학교/2학년/1학기/웹 프로그래밍/기말고사 프로젝트_1분대기조/project_Arithmetic/Formula/' + name + '.html'; // 프로젝트 폴더 경로에 맞게 수정해주세요
+				window.open(link, target="_self");
+				return false;
+			}
+	</script>
+</body>
